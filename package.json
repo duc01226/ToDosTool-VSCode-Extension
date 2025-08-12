@@ -1,0 +1,760 @@
+{
+  "activationEvents": [
+    "onStartupFinished",
+    "onWebviewPanel:pr.codingAgentSessionLogView",
+    "onLanguage:*",
+    "onCommand:workbench.action.chat.open"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "chatParticipants": [
+      {
+        "description": "AI workflow orchestrator for complex development tasks. Provides intelligent todo management with semantic task analysis, dynamic workflow generation, and automated progress tracking. Use for breaking down complex requirements into manageable tasks, maintaining context across development sessions, and coordinating multi-step implementation processes. Essential for complex refactoring, architectural changes, feature implementations, and any development work requiring structured task coordination and progress visibility.",
+        "id": "todos",
+        "isSticky": true,
+        "name": "todos"
+      }
+    ],
+    "commands": [
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.createTodo",
+        "title": "Create Todo"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.updateStatus",
+        "title": "Update Todo Status"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.addSubTask",
+        "title": "Add SubTask"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.showDashboard",
+        "title": "Show Dashboard"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.clearSession",
+        "title": "Clear Session"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.toggleAutoProgression",
+        "title": "Toggle Auto-Progression"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.createWorkflow",
+        "title": "Create Workflow"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.showWorkflowStatus",
+        "title": "Show Workflow Status"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.pauseResumeWorkflow",
+        "title": "Pause/Resume Workflow"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.analyzeTask",
+        "title": "Analyze Task Complexity"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.createCheckpoint",
+        "title": "Create Context Checkpoint"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.cleanupMemory",
+        "title": "Cleanup Old Todos"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.prioritizeTasks",
+        "title": "Show Prioritized Tasks"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.showAIActivity",
+        "title": "Show AI Tool Activity Log"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.debugToolRegistration",
+        "title": "Debug Tool Registration"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.startMCPServer",
+        "title": "Start MCP Server"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.stopMCPServer",
+        "title": "Stop MCP Server"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.showMCPStatus",
+        "title": "Show MCP Server Status"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.demoAITools",
+        "title": "🚀 Demo AI Tools"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.listAITools",
+        "title": "List Available AI Tools"
+      },
+      {
+        "category": "AI-ToDos-Tool", 
+        "command": "ai-todos-tool.executeAITool",
+        "title": "Execute AI Tool"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.showAIToolsStatus",
+        "title": "Show AI Tools Status"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.enhancedWorkflowDemo",
+        "title": "🚀 Enhanced Workflow Demo (Claude Code Agent Style)"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.showConfiguration",
+        "title": "🔧 Show Context Management Configuration"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.testContextCompression",
+        "title": "🧪 Test Context Compression"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.showCapabilities",
+        "title": "📋 Show AI Tools Capabilities"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.aiAgentCallback",
+        "title": "AI Agent Callback Handler"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.discoverAITools",
+        "title": "Discover Available AI Tools"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.setModelContext",
+        "title": "Set AI Model Context"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.getAIToolsSchema",
+        "title": "Get AI Tools Schema"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.validateAITool",
+        "title": "Validate AI Tool Configuration"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.aiToolsAvailable",
+        "title": "Check AI Tools Availability"
+      },
+      {
+        "category": "AI-ToDos-Tool",
+        "command": "ai-todos-tool.aiToolsCount",
+        "title": "Get AI Tools Count"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ai-todos-tool.createTodo",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t"
+      },
+      {
+        "command": "ai-todos-tool.showDashboard",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d"
+      },
+      {
+        "command": "ai-todos-tool.createWorkflow",
+        "key": "ctrl+shift+w",
+        "mac": "cmd+shift+w"
+      },
+      {
+        "command": "ai-todos-tool.showWorkflowStatus",
+        "key": "ctrl+shift+s",
+        "mac": "cmd+shift+s"
+      }
+    ],
+    "languageModelTools": [
+      {
+        "displayName": "Todos Management Tool",
+        "inputSchema": {
+          "properties": {
+            "action": {
+              "description": "Action to perform on todos and workflows. Use 'createWorkflow' for multi-step tasks, 'create' for single tasks, 'update' for status changes, 'list' for viewing todos, 'analyze' for complexity assessment. Choose action based on user intent: complex projects need workflows, simple tasks need basic todo management.",
+              "enum": [
+                "addSubTask",
+                "analyze",
+                "approve",
+                "checkpoint",
+                "clear",
+                "complete",
+                "create",
+                "createWorkflow",
+                "delete",
+                "get",
+                "getNextSteps",
+                "getWorkflowStatus",
+                "list",
+                "prioritize",
+                "requestGuidance",
+                "summary",
+                "toggleAutoProgression",
+                "update",
+                "updateSubTask"
+              ],
+              "type": "string"
+            },
+            "autoProgression": {
+              "description": "Enable/disable automatic workflow progression. When true, completed tasks automatically trigger next steps. When false, requires manual progression between workflow tasks.",
+              "type": "boolean"
+            },
+            "content": {
+              "description": "Primary task description that users see. Should be concise but descriptive. For workflows, this becomes the main workflow title. Extract this from user natural language requests.",
+              "type": "string"
+            },
+            "notes": {
+              "description": "📋 CONTEXTUAL ANNOTATIONS: Additional information, progress updates, blockers, or status change rationale. Use for capturing user explanations ('paused because waiting for API access', 'completed but needs review'). Essential for maintaining context in long-running workflows and collaboration scenarios.",
+              "type": "string"
+            },
+            "status": {
+              "description": "Current task state for progress tracking and workflow automation. Use 'pending' for not started, 'in_progress' for active work, 'completed' for finished tasks, 'blocked' for dependency waits, 'awaiting_approval' for review phases.",
+              "enum": [
+                "awaiting_approval",
+                "blocked",
+                "cancelled",
+                "completed",
+                "in_progress",
+                "paused",
+                "pending"
+              ],
+              "type": "string"
+            },
+            "subTaskContent": {
+              "description": "📝 SUBTASK DESCRIPTION: Content for new subtasks when breaking down complex todos. Use when users want to decompose large tasks ('break this down into steps', 'add setup database as a subtask'). Should be specific, actionable items that contribute to the parent task completion.",
+              "type": "string"
+            },
+            "subTaskId": {
+              "description": "🔗 SUBTASK IDENTIFIER: Target specific subtasks within a parent todo for granular operations. Used with 'updateSubTask' action when users want to modify specific parts of complex tasks. Auto-generated when adding subtasks with 'addSubTask' action.",
+              "type": "string"
+            },
+            "summary": {
+              "description": "📄 DETAILED CONTEXT: Comprehensive description including technical details, requirements, acceptance criteria, and context. Use when user provides detailed specifications or when AI needs to preserve complex context across sessions. Critical for workflow orchestration and complex task management.",
+              "type": "string"
+            },
+            "todoId": {
+              "description": "🆔 UNIQUE TODO IDENTIFIER: Required for update, complete, delete, get operations. Auto-generated when creating new todos. Use this when user refers to specific todo items ('update task ABC123', 'mark the database task as done'). Essential for targeting specific todos in complex workflows.",
+              "type": "string"
+            },
+            "workflowId": {
+              "description": "🔄 WORKFLOW IDENTIFIER: Unique ID for targeting specific workflows in operations like 'getWorkflowStatus', 'toggleAutoProgression'. Generated automatically when creating workflows. Use when users reference specific workflows or multi-step processes by name or context.",
+              "type": "string"
+            },
+            "workflowTasks": {
+              "description": "Array of sequential task descriptions for complex, multi-step processes. Use with 'createWorkflow' action when users describe processes requiring coordination, dependencies, or step-by-step execution.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "type": "object"
+        },
+        "modelDescription": "Manage todos and workflows for complex development tasks. Use this tool to break down multi-step projects into manageable tasks, track progress across coding sessions, and maintain context during long-running development work. Particularly useful for: 1. Breaking down complex implementation requirements into actionable steps 2. Managing multi-phase development projects with dependencies 3. Tracking progress on refactoring or architectural changes 4. Coordinating tasks that span multiple files or components 5. Maintaining context when switching between different aspects of a project. The tool provides intelligent task analysis, automatic workflow progression, and context preservation across VS Code sessions.",
+        "name": "todosTool"
+      },
+      {
+        "displayName": "AI Semantic Analyzer",
+        "inputSchema": {
+          "properties": {
+            "prompt": {
+              "description": "📋 User prompt or task description to analyze",
+              "type": "string"
+            },
+            "analysisType": {
+              "description": "🔍 Type of analysis to perform",
+              "enum": [
+                "complexity",
+                "semantic", 
+                "workflow_needs",
+                "todo_relevance",
+                "priority"
+              ],
+              "type": "string"
+            },
+            "context": {
+              "description": "🌐 Additional context for analysis (optional)",
+              "type": "string"
+            },
+            "options": {
+              "description": "⚙️ Additional analysis options",
+              "properties": {
+                "includeRecommendations": {
+                  "description": "Include AI recommendations in the analysis",
+                  "type": "boolean"
+                },
+                "detailedBreakdown": {
+                  "description": "Provide detailed step-by-step breakdown",
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "prompt",
+            "analysisType"
+          ],
+          "type": "object"
+        },
+        "modelDescription": "Analyze task complexity and provide intelligent recommendations for development workflows. Use this tool to understand the scope and complexity of user requests, determine optimal task management strategies, and generate structured approaches for complex development work. Essential for: 1. Assessing whether a user request needs workflow orchestration 2. Analyzing technical complexity of implementation tasks 3. Determining priority levels for development work 4. Recommending task breakdown strategies 5. Evaluating project scope and resource requirements. Provides semantic analysis of natural language requirements and suggests appropriate management approaches.",
+        "name": "aiSemanticAnalyzer"
+      },
+      {
+        "displayName": "AI Todo Manager",
+        "inputSchema": {
+          "properties": {
+            "action": {
+              "description": "🎯 Action to perform",
+              "enum": [
+                "create",
+                "update",
+                "complete", 
+                "delete",
+                "list",
+                "get",
+                "summary",
+                "createWorkflow",
+                "getWorkflowStatus",
+                "addSubTask",
+                "updateSubTask",
+                "analyze",
+                "prioritize",
+                "checkpoint",
+                "toggleAutoProgression",
+                "approve",
+                "requestGuidance",
+                "getNextSteps",
+                "clear"
+              ],
+              "type": "string"
+            },
+            "content": {
+              "description": "📝 Task content or description for create/update operations",
+              "type": "string"
+            },
+            "todoId": {
+              "description": "🆔 Unique identifier for targeting specific todos",
+              "type": "string"
+            },
+            "status": {
+              "description": "🚦 Task status for workflow tracking",
+              "enum": [
+                "pending",
+                "in_progress", 
+                "completed",
+                "cancelled",
+                "blocked",
+                "paused",
+                "awaiting_approval"
+              ],
+              "type": "string"
+            },
+            "workflowTasks": {
+              "description": "🔄 Array of task descriptions for workflow creation",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "priority": {
+              "description": "⭐ Task priority level",
+              "enum": [
+                "low",
+                "medium",
+                "high", 
+                "critical"
+              ],
+              "type": "string"
+            },
+            "summary": {
+              "description": "📄 Detailed task description with context and requirements",
+              "type": "string"
+            },
+            "notes": {
+              "description": "📋 Additional notes or comments for the task",
+              "type": "string"
+            },
+            "subTaskContent": {
+              "description": "📝 Content for new subtasks when breaking down complex todos",
+              "type": "string"
+            },
+            "subTaskId": {
+              "description": "🔗 Identifier for targeting specific subtasks",
+              "type": "string"
+            },
+            "workflowId": {
+              "description": "🔄 Identifier for targeting specific workflows",
+              "type": "string"
+            },
+            "autoProgression": {
+              "description": "⚡ Enable/disable automatic workflow progression",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "type": "object"
+        },
+        "modelDescription": "Create and manage development todos with intelligent workflow orchestration. Use this tool for comprehensive task management including creation, updates, progress tracking, and workflow automation. Particularly effective for: 1. Creating structured todo lists from complex requirements 2. Managing task dependencies and sequential workflows 3. Tracking development progress across multiple components 4. Coordinating tasks that require specific ordering or approval steps 5. Maintaining task context and recovery guidance for complex implementations. Provides automated workflow progression and intelligent task breakdown for development projects.",
+        "name": "aiTodoManager"
+      },
+      {
+        "displayName": "AI Workflow Orchestrator",
+        "inputSchema": {
+          "properties": {
+            "objective": {
+              "description": "🎯 Main objective or goal for workflow creation",
+              "type": "string"
+            },
+            "complexity": {
+              "description": "📊 Estimated complexity level",
+              "enum": [
+                "simple",
+                "medium",
+                "complex",
+                "very_complex"
+              ],
+              "type": "string"
+            },
+            "approach": {
+              "description": "🛠️ Workflow approach strategy",
+              "enum": [
+                "single_task",
+                "sequential_workflow",
+                "multi_phase_discovery",
+                "approval_workflow"
+              ],
+              "type": "string"
+            },
+            "autoExecute": {
+              "description": "⚡ Enable automatic progression between workflow steps",
+              "type": "boolean"
+            },
+            "requireApproval": {
+              "description": "✅ Require manual approval for critical steps",
+              "type": "boolean"
+            },
+            "context": {
+              "description": "🌐 Additional context for workflow creation",
+              "properties": {
+                "projectType": {
+                  "type": "string"
+                },
+                "technology": {
+                  "type": "string"
+                },
+                "timeframe": {
+                  "type": "string"
+                },
+                "resources": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "constraints": {
+              "description": "⚠️ Constraints and limitations",
+              "properties": {
+                "maxSteps": {
+                  "type": "number"
+                },
+                "timeLimit": {
+                  "type": "string"
+                },
+                "dependencies": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "objective"
+          ],
+          "type": "object"
+        },
+        "modelDescription": "Generate intelligent workflows from natural language requirements with automated task breakdown and dependency analysis. Use this tool to transform complex development objectives into structured, executable workflows. Essential for: 1. Creating multi-phase development workflows from high-level requirements 2. Breaking down architectural changes into sequential steps 3. Generating approval workflows for critical implementation phases 4. Coordinating complex refactoring processes with dependencies 5. Planning feature implementations that span multiple components. Provides intelligent task sequencing, dependency management, and execution guidance for complex development processes.",
+        "name": "aiWorkflowOrchestrator"
+      }
+    ],
+    "aiTools": [
+      {
+        "name": "ai_todos_manager",
+        "displayName": "AI Todo Management System",
+        "description": "Create and manage development todos with intelligent workflow orchestration and context preservation. Use for breaking down complex tasks, tracking progress, and coordinating multi-step development processes.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string",
+              "description": "🎯 Action to perform: 'create' for new todos, 'update' for status changes, 'createWorkflow' for multi-step processes, 'list' for viewing todos, 'analyze' for complexity assessment, 'prioritize' for urgency sorting",
+              "enum": [
+                "create",
+                "update", 
+                "complete",
+                "delete",
+                "list",
+                "get",
+                "summary",
+                "createWorkflow",
+                "getWorkflowStatus",
+                "addSubTask",
+                "updateSubTask",
+                "analyze",
+                "prioritize",
+                "checkpoint",
+                "toggleAutoProgression",
+                "approve",
+                "requestGuidance",
+                "getNextSteps",
+                "clear"
+              ]
+            },
+            "content": {
+              "type": "string",
+              "description": "📝 Task content or description for create/update operations"
+            },
+            "todoId": {
+              "type": "string", 
+              "description": "🆔 Unique identifier for targeting specific todos"
+            },
+            "status": {
+              "type": "string",
+              "description": "🚦 Task status for workflow tracking",
+              "enum": ["pending", "in_progress", "completed", "cancelled", "blocked", "paused", "awaiting_approval"]
+            },
+            "workflowTasks": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "🔄 Array of task descriptions for workflow creation"
+            },
+            "priority": {
+              "type": "string",
+              "description": "⭐ Task priority level",
+              "enum": ["low", "medium", "high", "critical"]
+            }
+          },
+          "required": ["action"]
+        }
+      },
+      {
+        "name": "ai_semantic_analyzer", 
+        "displayName": "AI Semantic Task Analyzer",
+        "description": "Analyze task complexity and provide intelligent recommendations for development workflows. Assess project scope, determine optimal task management strategies, and recommend structured approaches for complex work.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "prompt": {
+              "type": "string",
+              "description": "📋 User prompt or task description to analyze"
+            },
+            "analysisType": {
+              "type": "string", 
+              "description": "🔍 Type of analysis to perform",
+              "enum": ["complexity", "semantic", "workflow_needs", "todo_relevance", "priority"]
+            },
+            "context": {
+              "type": "string",
+              "description": "🌐 Additional context for analysis"
+            }
+          },
+          "required": ["prompt", "analysisType"]
+        }
+      },
+      {
+        "name": "ai_workflow_orchestrator",
+        "displayName": "AI Workflow Orchestrator", 
+        "description": "Generate intelligent workflows from natural language requirements with automated task breakdown and dependency analysis. Transform complex objectives into structured, executable development workflows.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "objective": {
+              "type": "string",
+              "description": "🎯 Main objective or goal for workflow creation"
+            },
+            "complexity": {
+              "type": "string",
+              "description": "📊 Estimated complexity level",
+              "enum": ["simple", "medium", "complex", "very_complex"]
+            },
+            "approach": {
+              "type": "string", 
+              "description": "🛠️ Workflow approach strategy",
+              "enum": ["single_task", "sequential_workflow", "multi_phase_discovery", "approval_workflow"]
+            },
+            "autoExecute": {
+              "type": "boolean",
+              "description": "⚡ Enable automatic progression between workflow steps"
+            },
+            "requireApproval": {
+              "type": "boolean", 
+              "description": "✅ Require manual approval for critical steps"
+            }
+          },
+          "required": ["objective"]
+        }
+      }
+    ],
+    "configuration": {
+      "title": "AI-ToDos-Tool",
+      "properties": {
+        "ai-todos-tool.mcp.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable MCP (Model Context Protocol) server for Claude/Anthropic AI integration"
+        },
+        "ai-todos-tool.mcp.port": {
+          "type": "number",
+          "default": 3000,
+          "description": "Port for MCP server (auto-increments if occupied)"
+        },
+        "ai-todos-tool.mcp.autoStart": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically start MCP server when extension activates"
+        },
+        "ai-todos-tool.aiModelPriorities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "Claude Sonnet 4",
+            "GPT-5",
+            "Claude",
+            "GPT",
+            "Copilot"
+          ],
+          "description": "Priority order for AI model selection in MCP operations. Higher priority models are selected first. Supports partial name matching (case-insensitive).",
+          "markdownDescription": "**Model Priority Configuration**: Defines the order of preference for AI model selection in MCP operations.\n\n**Examples:**\n- `Claude Sonnet` - Matches Claude 3.5 Sonnet, Claude Sonnet 4, etc.\n- `Claude` - Matches any Claude model\n- `GPT-4` - Matches GPT-4, GPT-4 Turbo, etc.\n- `GPT` - Matches any GPT model\n- `Copilot` - Matches GitHub Copilot models\n\n**Matching Logic**: Uses case-insensitive partial matching against model name, family, and vendor fields."
+        },
+        "ai-todos-tool.contextManagement.maxTokensBeforeCompression": {
+          "type": "number",
+          "default": 100000,
+          "minimum": 1000,
+          "maximum": 500000,
+          "description": "Maximum number of tokens in context before AI-powered compression is triggered. Higher values allow more context before compression but may hit AI model limits.",
+          "markdownDescription": "**Context Compression Threshold**: When accumulated context exceeds this token count, the AI-powered compression system automatically reduces context size while preserving critical information.\n\n**Recommended Values:**\n- `100000` - Default, good for most workflows\n- `50000` - Conservative, triggers compression earlier\n- `200000` - Aggressive, allows larger context before compression\n\n**Note:** Very high values may exceed AI model token limits and cause failures."
+        },
+        "ai-todos-tool.contextManagement.maxHistoryItems": {
+          "type": "number",
+          "default": 100,
+          "minimum": 10,
+          "maximum": 1000,
+          "description": "Maximum number of context history items to retain per workflow. Older items are automatically removed to prevent memory issues.",
+          "markdownDescription": "**Context History Limit**: Controls how many context snapshots are kept in memory for each workflow.\n\n**Impact:**\n- **Higher values**: More complete context history, better AI understanding\n- **Lower values**: Less memory usage, faster performance\n- **Memory usage**: ~1-10KB per item depending on content size"
+        },
+        "ai-todos-tool.contextManagement.compressionRatio": {
+          "type": "number",
+          "default": 0.7,
+          "minimum": 0.1,
+          "maximum": 0.9,
+          "description": "Target compression ratio when AI compresses context (0.5 = compress to 50% of original size).",
+          "markdownDescription": "**Context Compression Ratio**: When context compression is triggered, this setting controls how aggressively to compress.\n\n**Examples:**\n- `0.5` - Compress to 50% (default, balanced)\n- `0.3` - Compress to 30% (aggressive compression)\n- `0.7` - Compress to 70% (light compression)\n\n**Trade-off**: Lower values save more tokens but may lose more detail."
+        },
+        "ai-todos-tool.contextManagement.enableIntelligentSummarization": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AI-powered intelligent context summarization. When disabled, uses simple rule-based compression.",
+          "markdownDescription": "**Intelligent Context Compression**: Uses AI models to intelligently summarize and compress context while preserving critical information.\n\n**When enabled**: AI analyzes context and creates comprehensive summaries\n**When disabled**: Uses simple rule-based compression (faster but less intelligent)\n\n**Recommendation**: Keep enabled unless experiencing performance issues."
+        }
+      }
+    }
+  },
+  "description": "AI-powered workflow orchestration for complex development tasks. Transforms complex development processes into structured, manageable workflows with intelligent task breakdown, context preservation, and automated progress tracking. Essential for multi-step implementations, refactoring projects, and coordinated development work requiring progress visibility and context management.",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.102.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.25.8",
+    "eslint": "^9.32.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.2"
+  },
+  "displayName": "AI-ToDos-Tool",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "main": "./dist/extension.js",
+  "name": "ai-todos-tool",
+  "publisher": "duc01226",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duc01226/ToDosTool-VSCode-Extension.git"
+  },
+  "scripts": {
+    "build:vsix": "npm run package && npx vsce package",
+    "check-types": "tsc --noEmit",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "compile-tests": "tsc -p . --outDir out",
+    "lint": "eslint src",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "test": "vscode-test",
+    "vscode:prepublish": "npm run package",
+    "watch": "npm-run-all -p watch:*",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json"
+  },
+  "version": "0.0.1"
+}
